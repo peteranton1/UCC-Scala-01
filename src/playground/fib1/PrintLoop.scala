@@ -2,14 +2,19 @@ package playground.fib1
 
 trait PrintLoop {
 
-  def printLoop(n: Long,
-                fn:Long => Long): Unit = {
+  def StopWatch(): Long = System.currentTimeMillis()
+
+  def printLoop(n: Int,
+                 fn:Int => BigInt): Unit = {
+    val start = StopWatch()
     print("(")
-    for (a <- 0L to n) {
+    for (a <- 0 to n) {
+      if(a % 5 == 0) println("|")
       print(fn(a))
       if(a != n) print(" ")
     }
-    println(")")
+    val diff = StopWatch() - start
+    println(s") $diff millis")
   }
 
 }

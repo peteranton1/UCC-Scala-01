@@ -2,9 +2,9 @@ package playground.fib1
 
 object FibLoop extends App with PrintLoop {
 
-  def fibLoop(n: Long): Long = {
-    var first = 0
-    var second = 1
+  def fibLoop(n: Int): BigInt = {
+    var first = BigInt(0)
+    var second = BigInt(1)
     var count = n
 
     while(count > 0){
@@ -16,5 +16,5 @@ object FibLoop extends App with PrintLoop {
     first
   }
 
-  printLoop(10,n => fibLoop(n))
+  printLoop(100,n => fibLoop(n))
 }
