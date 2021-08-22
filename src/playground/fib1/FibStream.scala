@@ -16,7 +16,7 @@ object FibStream extends App with PrintLoop {
     BigInt(1) #:: fib.zip(fib.tail)
     .map(p => p._1 + p._2)
 
-  def fibLazyList(n: Int) = fib(n)
+  def fibLazyList(n: Int): BigInt = fib(n)
 
   /*
   Also, we can create a memoize wrapper in
