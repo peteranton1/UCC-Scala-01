@@ -23,7 +23,8 @@ object TuplesAndMaps extends App {
     .withDefaultValue(-1)
   println("011: " + phonebook)
   println("012: " + phonebook.contains("Jim"))
-  println("013: " + phonebook("Jim"))
+  println("013: Jim = " + phonebook("Jim"))
+  println("013: JIM = " + phonebook("JIM"))
   println("014: " + phonebook("Mary"))
 
   // add a pairing
