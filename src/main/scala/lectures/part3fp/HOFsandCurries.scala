@@ -3,7 +3,7 @@ package lectures.part3fp
 object HOFsandCurries extends App {
 
   val superFunction:
-    (Int, (String, (Int => Boolean)) => Int) => (Int => Int) = null
+    (Int, (String, Int => Boolean) => Int) => (Int => Int) = null
 
   // Higher order function (HOF)
   // map, flatMap, filter in MyList
