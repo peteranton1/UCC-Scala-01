@@ -4,7 +4,7 @@ import exercises.{Cons, Empty}
 
 object MapFlatmapFilterFor extends App {
 
-  val list = List(1,2,3)
+  val list = List(1, 2, 3)
   println(list)
   println(list.head)
   println(list.tail)
@@ -17,12 +17,12 @@ object MapFlatmapFilterFor extends App {
   println(list.filter(_ % 2 == 0))
 
   // flatMap
-  val toPair = (x: Int) => List(x, x+1)
+  val toPair = (x: Int) => List(x, x + 1)
   println(list.flatMap(toPair))
 
   // print out all combinations between two lists
-  val numbers = List(1,2,3,4)
-  val chars = List('a','b','c','d')
+  val numbers = List(1, 2, 3, 4)
+  val chars = List('a', 'b', 'c', 'd')
   val colors = List("black", "white")
   // List("a1","a2"... "a4"... "d4")
 
@@ -36,7 +36,7 @@ object MapFlatmapFilterFor extends App {
 
   // for combinations
   val forCombinations = for {
-    n <- numbers if(n % 2 == 0)
+    n <- numbers if (n % 2 == 0)
     c <- chars
     color <- colors
   } yield "" + c + n + " " + color
@@ -57,12 +57,14 @@ object MapFlatmapFilterFor extends App {
     - map, flatMap, filter
    */
 
+  val nums = Cons("1", Cons("2", Cons("3", Empty)))
   val names = Cons("Al", Cons("Be", Cons("Cy", Empty)))
   println(names)
 
-//  for {
-//    name <- names
-//  } println(name.head)
-
+  val forComp1 = for {
+    name <- names
+    num <- nums
+  } yield name + num
+  println(forComp1)
 
 }

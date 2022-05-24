@@ -42,7 +42,7 @@ class EvenPredicate extends MyPredicate[Int] {
   override def test(elem: Int): Boolean = elem % 2 == 0
 }
 
-trait MyTransformer[-A, B] {
+trait MyTransformer[-A, +B] {
   def transform(elem: A): B
 }
 
