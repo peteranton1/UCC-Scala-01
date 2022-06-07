@@ -37,8 +37,7 @@ object InsertSortFP extends App {
     @tailrec
     def sortTailRec(list: List[Int], acc: List[Int]): List[Int] =
       if (list.isEmpty) acc
-      else sortTailRec(list.tail,
-        insertTailRec(list.head, acc, Nil))
+      else sortTailRec(list.tail, insertTailRec(list.head, acc, Nil))
 
     sortTailRec(list, Nil)
   }
